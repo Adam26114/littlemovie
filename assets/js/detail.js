@@ -3,6 +3,7 @@
 import { api_key, imageBaseURL ,fetchDataFromServer } from "./api.js";
 import { sidebar } from "./sidebar.js";
 import { createMovieCard } from "./movie-card.js";
+import { search } from "./search.js";
 
 const movieId = window.localStorage.getItem("movieId");
 const pageContent = document.querySelector("[page-content]");
@@ -66,9 +67,11 @@ fetchDataFromServer(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${api
     const movieDetail = document.createElement("div");
     movieDetail.classList.add("movie-detail");
 
+   
+
     movieDetail.innerHTML = `
 
-        <div class="backdrop-image" style="background-image:url("${imageBaseURL}${"w1280" || "original"} ${backdrop_path || poster_path}");"></div>
+        <div class="backdrop-image" style="background-image:url(' ${imageBaseURL}${"w1280" || "original"}${backdrop_path || poster_path} ');"></div>
 
         <figure class="poster-box movie-poster">
             <img src="${imageBaseURL}w342${poster_path}" alt="${title} poster" class="img-cover"/>
@@ -159,7 +162,7 @@ const addSuggestedMovies = function ({ results: movieList }, title) {
   
     movieListElem.innerHTML = `
       <div class="title-wrapper">
-        <h3 class="title-large">You May Also Like/h3>
+        <h3 class="title-large">You May Also Like</h3>
       </div>
   
       <div class="slider-list">
@@ -174,3 +177,5 @@ const addSuggestedMovies = function ({ results: movieList }, title) {
   
     pageContent.appendChild(movieListElem);
   };
+
+search();

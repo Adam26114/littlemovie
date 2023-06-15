@@ -27,12 +27,7 @@ addEventOnElements(searchTogglers,"click",function(){
 });
 
 
-// Auto Year
-// var autodate = document.getElementById("autodate");
 
-// var year = new Date().getUTCFullYear();
-
-// autodate.textContent = year;
 
 
 // ! Clear text in search area

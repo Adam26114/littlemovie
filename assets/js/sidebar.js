@@ -18,6 +18,11 @@ export function sidebar(){
         genreLink();
     });
 
+    // Auto Year
+
+    var year = new Date().getUTCFullYear();
+
+
     const sidebarInner = document.createElement("div");
     sidebarInner.classList.add("sidebar-inner");
     sidebarInner.innerHTML =  `
@@ -32,15 +37,29 @@ export function sidebar(){
             
             <a href="./movie-list.html" menu-close class="sidebar-link" onclick='getMovieList("with_original_language=hi","Hindi")'>Hindi</a>
 
+            <a href="./movie-list.html" menu-close class="sidebar-link" onclick='getMovieList("with_original_language=my","Burmese")'>Myanmar</a>
+
+            <a href="./movie-list.html" menu-close class="sidebar-link" onclick='getMovieList("with_original_language=th","Thai")'>Thai</a>
+
+            <a href="./movie-list.html" menu-close class="sidebar-link" onclick='getMovieList("with_original_language=ko","Korean")'>Korean</a>
+
+            <a href="./movie-list.html" menu-close class="sidebar-link" onclick='getMovieList("with_original_language=ja","Japanese")'>Japanese</a>
+
+            <a href="./movie-list.html" menu-close class="sidebar-link" onclick='getMovieList("with_original_language=cn","Chinese")'>Chinese</a>
+
             <a href="./movie-list.html" menu-close class="sidebar-link" onclick='getMovieList("with_original_language=bn","Bengali")'>Bengali</a>
+            
 
         </div>
 
         <div class="sidebar-footer">
-            <p class="copyright">Copyright <span id="autodate" class="d-inline"></span> <a href="https://youtube.com/@codewithsadee">codewithsadee</a></p>
+            <p class="copyright">Copyright <span id="autodate" class="d-inline">${year}</span> <a href="https://youtube.com/@codewithsadee">codewithsadee</a></p>
             <img src="./assets/img/panda_logo.png" width="80" alt="panda_logo"/>
         </div>
     `;
+
+
+    // autodate.textContent = year;
 
     const genreLink = function(){
 
