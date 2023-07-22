@@ -512,7 +512,8 @@ body {
     transition: var(--transition-short);
 }
 
-.sidebar-link:is(:hover, :focus-visible) {
+.sidebar-link:is(:hover, :focus-visible) ,
+.sidebar-link.active{
     color: var(--on-background);
 }
 
