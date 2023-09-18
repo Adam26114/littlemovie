@@ -53,7 +53,7 @@ export function sidebar(){
         </div>
 
         <div class="sidebar-footer">
-            <p class="copyright">Copyright <span id="autodate" class="d-inline">${year}</span> <a href="https://youtube.com/@codewithsadee">codewithsadee</a></p>
+            <p class="copyright">© Copyright <span id="autodate" class="d-inline">${year}</span> <a href="https://zweaungnaing.vercel.app/" target="_blank">Zwe Aung Naing</a></p>
             <img src="./assets/img/panda_logo.png" width="80" alt="panda_logo"/>
         </div>
     `;

@@ -121,9 +121,6 @@ body {
     border-radius: var(--radius-8);
 }
 
-/*
- * copyright 2023 codewithsadee1
- */
 
 /*-----------------------------------*\
   #CUSTOM PROPERTY
@@ -505,6 +502,10 @@ body {
 .sidebar-list,
 .sidebar-footer {
     padding-inline: 36px;
+}
+
+.sidebar-footer a{
+    font-size: 1.5rem;
 }
 
 .sidebar-link {
